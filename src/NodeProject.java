@@ -62,7 +62,7 @@ public class NodeProject <T>{
         }
     }
 
-    /**.equals method**/
+    /** .equals method**/
     public boolean equals(NodeProject node) {
         if (this.value == null && node.value == null) {
             return true;
