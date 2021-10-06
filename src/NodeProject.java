@@ -54,14 +54,23 @@ public class NodeProject <T>{
     public NodeProject getSecondNode(){return secondNode;}
 
     /**toString method**/
-    public String toString(){
-        return "Node: " + value.toString();
+    public String toString() {
+        if (value == null) {
+            return "";
+        } else {
+            return "Node: " + value.toString();
+        }
     }
 
     /**.equals method**/
-    public boolean equals(NodeProject node){
-    boolean x = this.value.equals(node.getValue());
-    return x;
+    public boolean equals(NodeProject node) {
+        if (this.value == null && node.value == null) {
+            return true;
+        } else if (this.value == null || node.value == null) {
+            return false;
+        } else {
+            return this.value == node.value;
+        }
     }
 }
 
