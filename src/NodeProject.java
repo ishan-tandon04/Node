@@ -65,10 +65,10 @@ public class NodeProject <T>{
     /** .equals method**/
     public boolean equals(NodeProject node) {
         if (this.value == null && node.value == null) {
-            return true;
+            return true;  /**if both return null then print true**/
         } else if (this.value == null || node.value == null) {
-            return false;
-        } else {
+            return false; /**if only one returns null then print fast**/
+        } else { /**if neither return true, return node value**/
             return this.value == node.value;
         }
     }
